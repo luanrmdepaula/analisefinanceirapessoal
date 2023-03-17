@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-#Abrindo o arquivo xlsx do excel - Fatura Nubank Agosto2022
+#Abrindo arquivo csv e corrigindo
 
 conta_fatura = pd.read_csv(r'', sep = ',')
 conta_fatura = conta_fatura.drop('', axis=1)
@@ -31,3 +31,9 @@ def get():
     total = sum(valor_total)
     
     return total
+
+
+
+#Plot do fluxo de entrada e saída
+
+conta_fatura.plot()
